@@ -75,6 +75,10 @@ nav ul li{
     
 }
 
+.songItem i{
+    cursor: pointer;
+}
+
 .timestamp{
     margin: 0 22px;
 }
