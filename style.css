@@ -58,8 +58,8 @@ nav ul li{
 }
 
 .songItem{
-    background-color: white;
-    color: black;
+    background-color: #a6127d;
+    color:white;
     /* height: 50px; */
     width: 60%;
     margin: 12px 0;
@@ -94,6 +94,7 @@ nav ul li{
 
 #songProgress{
     width:80vw;
+    cursor: pointer;
 }
 
 .icons{
@@ -106,4 +107,10 @@ nav ul li{
     left: 10vw;
     display: flex;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.songDisplay img{
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
