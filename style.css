@@ -34,7 +34,7 @@ nav ul li{
 .logo{
     display: flex;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bolder;
 }
 
@@ -47,5 +47,19 @@ nav ul li{
     height: 100px;
     bottom: 0;
     background-color: tomato;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
+}
+
+#songProgress{
+    width:80vw;
+}
+
+.icons{
+    margin: 15px 0;
+    cursor: pointer;
 }
