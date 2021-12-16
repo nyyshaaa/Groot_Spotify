@@ -1,22 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@300&display=swap');
+
 *{
     margin: 0;
     padding:0;
 }
 :root{
-    --background-color:#63084a
+    --background-color:#63084a;
 }
 
 body{
     /* color: var(--background-color); */
-    /* background-color: var(--background-color); */
+    background-color: var(--background-color);
 }
 
 nav ul{
     display: flex;
     align-items: center;
     list-style: none;
-    background-color: tomato;
+    background-color:#820b61;
     height: 60px;
+    font-family: 'Open Sans', sans-serif;
     
 }
 
@@ -40,13 +43,21 @@ nav ul li{
 
 .container{
     min-height: 80vh;
+    background-color: #760c59;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 23px auto;
+    width:75%;
+    border-radius: 12px;
+    padding: 35px;
+
 }
 
 .bottom{
     position: sticky;
     height: 100px;
     bottom: 0;
-    background-color: tomato;
+    background-color:#820b61;
     color: white;
     display: flex;
     justify-content: center;
