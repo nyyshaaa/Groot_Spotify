@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding:0;
+}
+:root{
+    --background-color:#63084a
+}
+
+body{
+    /* color: var(--background-color); */
+    /* background-color: var(--background-color); */
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: tomato;
+    height: 60px;
+    
+}
+
+nav ul li{
+    padding: 0 12px;
+
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    padding:0 15px 0 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.container{
+    min-height: 80vh;
+}
+
+.bottom{
+    position: sticky;
+    height: 100px;
+    bottom: 0;
+    background-color: tomato;
+
+}
