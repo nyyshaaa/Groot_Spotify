@@ -53,6 +53,32 @@ nav ul li{
 
 }
 
+.songItemContainer{
+    margin-top: 60px;
+}
+
+.songItem{
+    background-color: white;
+    color: black;
+    /* height: 50px; */
+    width: 60%;
+    margin: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+
+}
+
+.songItem img{
+    width: 42px;
+    
+}
+
+.timestamp{
+    margin: 0 22px;
+}
+
 .bottom{
     position: sticky;
     height: 100px;
@@ -73,4 +99,11 @@ nav ul li{
 .icons{
     margin: 15px 0;
     cursor: pointer;
+}
+
+.songDisplay{
+    position: absolute;
+    left: 10vw;
+    display: flex;
+    align-items: center;
 }
