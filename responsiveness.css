@@ -1,0 +1,12 @@
+@media screen and (max-width:600px) {
+    body {
+        background-color: chartreuse;
+    }
+
+    .songItem {
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        min-width: 309px;
+    }
+
+}
