@@ -1,4 +1,4 @@
-let songIndex = 0;
+let songIndex = 1;
 let audioElement = new Audio("songs/Play With Fire.mp3");
 let mainPlayCircle = document.getElementById("mainPlay");
 let songProgress = document.getElementById("songProgress")
@@ -7,6 +7,7 @@ let songItems = document.getElementsByClassName("songItem")
 let songItemsPlay = document.getElementsByClassName("songItemPlay")
 let mainSongName=document.getElementById("mainSongName")
 // console.log(songItemsPlay)
+
 
 
 let songs = [{
@@ -76,6 +77,8 @@ let songs = [{
     }
 ]
 
+
+
 Array.from(songItems).forEach((element, i) => {
     // console.log(element,i)
     // console.log(songs[i].songName)
@@ -101,10 +104,32 @@ mainPlayCircle.addEventListener('click', () => {
 //Listen to audio element
 audioElement.addEventListener('timeupdate', () => {
     //update progressBar
+    
     progress = parseInt((audioElement.currentTime / audioElement.duration) * 100)
+    // console.log(progress)
     songProgress.value = progress
-
+    playNextSongOnEnd(progress)
 })
+
+function playNextSongOnEnd(progress){
+    console.log(songIndex)
+        if(progress===100){
+            songIndex=songIndex%13
+            audioElement.src=songs[songIndex].filePath
+            audioElement.currentTime = 0
+            mainSongName.innerHTML=songs[songIndex].songName
+            audioElement.play()
+            progress=0
+            songIndex=songIndex+1
+            // console.log(songIndex)
+            
+            // console.log(songIndex)
+            // mainPlayCircle.classList.remove('fa-play-circle');
+            // mainPlayCircle.classList.add('fa-pause-circle');
+            // gif.style.opacity = 1;
+        }
+    
+}
 
 songProgress.addEventListener('change', () => {
     audioElement.currentTime = (songProgress.value * audioElement.duration) / 100
@@ -136,6 +161,7 @@ Array.from(songItemsPlay).forEach((element, i) => {
         e.target.classList.add('fa-pause-circle')
         // makePlay()
         audioElement.src = songs[i].filePath
+        // console.log(audioElement.duration)
         audioElement.currentTime = 0
         mainSongName.innerHTML=songs[i].songName
         audioElement.play()
@@ -149,15 +175,15 @@ Array.from(songItemsPlay).forEach((element, i) => {
 
 
 document.getElementById('previous').addEventListener("click", () => {
-    console.log(songIndex)
-    if (songIndex<= 0) {
-        songIndex = 0
-    } else {
+    // console.log(songIndex)
+    if(songIndex<=1){
+        songIndex=1
+    }else{
         songIndex=songIndex-1
     }
-    audioElement.src = songs[songIndex].filePath
+    audioElement.src = songs[songIndex-1].filePath
     audioElement.currentTime = 0
-    mainSongName.innerHTML=songs[songIndex].songName
+    mainSongName.innerHTML=songs[songIndex-1].songName
     audioElement.play()
     mainPlayCircle.classList.remove('fa-play-circle');
     mainPlayCircle.classList.add('fa-pause-circle');
@@ -166,14 +192,10 @@ document.getElementById('previous').addEventListener("click", () => {
 
 document.getElementById('next').addEventListener("click", () => {
     
-    if (songIndex >= 12) {
-        songIndex = 0
-    } else {
-        songIndex=songIndex+1
-    }
-    audioElement.src = songs[songIndex].filePath
+    songIndex=songIndex%13+1
+    audioElement.src = songs[songIndex-1].filePath
     audioElement.currentTime = 0
-    mainSongName.innerHTML=songs[songIndex].songName
+    mainSongName.innerHTML=songs[songIndex-1].songName
     audioElement.play()
     mainPlayCircle.classList.remove('fa-play-circle');
     mainPlayCircle.classList.add('fa-pause-circle');
