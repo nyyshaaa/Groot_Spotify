@@ -6,4 +6,12 @@
         min-width: 309px;
     }
 
+    /* .container{
+        padding: 15px;
+    } */
+
+    .songItem{
+        margin: 12px 5px;
+    }
+
 }
