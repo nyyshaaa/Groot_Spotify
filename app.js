@@ -26,11 +26,6 @@ let songs = [{
         coverPath: "covers/in the end.png"
     },
     {
-        songName: "Kyun Dil Mera",
-        filePath: "songs/Kyun Dil Mera - Paharganj 128 Kbps.mp3",
-        coverPath: "covers/Kyun-Dil-Mera.jpg"
-    },
-    {
         songName: "Let Go",
         filePath: "songs/Let Go (Beau Young Prince) Music Video AMV-128k.mp3",
         coverPath: "covers/let go.jpg"
